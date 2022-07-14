@@ -1,4 +1,5 @@
 # all the students are put into an array
+=begin
 students = [
     {name:"Dr. Hannibal Lecter", cohort: :november},
     {name:"Darth Vader", cohort: :november},
@@ -12,7 +13,7 @@ students = [
     {name:"Joffrey Baratheon", cohort: :november},
     {name:"Norman Bates", cohort: :november}
    ]
-   
+=end
    # and then printed with array index
    def input_students
      puts "Please enter the names of the students"
@@ -39,12 +40,18 @@ students = [
    end
    
    def print(names)
-     names.each_with_index do |name, idx|
-      if name[:name].length < 12 
-       puts "#{idx + 1} - #{name[:name]} - cohort: (#{name[:cohort]})"
+    # names.each_with_index do |name, idx|
+    #  if name[:name].length < 12 
+    #   puts "#{idx + 1} - #{name[:name]} - cohort: (#{name[:cohort]})"
+    #  end
+    # end
+
+    i = 0
+      while i < names.length 
+        puts "#{i + 1} - #{names[i][:name]} - cohort: (#{names[i][:cohort]})"
+        i +=1
       end
-     end
-   end
+    end
    
    def print_footer(names)
      puts "Overall, we have #{names.count} great students"
