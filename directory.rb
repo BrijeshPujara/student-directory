@@ -39,8 +39,8 @@ def print_header
 end
 
 def print(names)
-  names.each do |name|
-    puts "#{name[:name]} cohort: (#{name[:cohort]})"
+  names.each_with_index do |name, idx|
+    puts "#{idx + 1} - #{name[:name]} - cohort: (#{name[:cohort]})"
   end
 end
 
