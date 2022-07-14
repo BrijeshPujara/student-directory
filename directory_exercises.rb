@@ -40,7 +40,7 @@ students = [
    
    def print(names)
      names.each_with_index do |name, idx|
-      if name[:name][0].downcase == "b" 
+      if name[:name].length < 12 
        puts "#{idx + 1} - #{name[:name]} - cohort: (#{name[:cohort]})"
       end
      end
