@@ -17,18 +17,26 @@ students = [
    # and then printed with array index
    def input_students
      puts "Please enter the names of the students"
+     name = gets.chomp
+     name = "N/A" if name.empty?
+
+     puts "Please enter the cohort month"
+     cohort = gets.chomp
+     cohort.to_sym
+
      puts "To finish, just hit the return twice"
    
      students = []
    
-     name = gets.chomp
-   
      while !name.empty? do
-       students << {name: name, cohort: :november, }
+       cohort = "N/A" if cohort.empty?
+       students << {name: name, cohort: cohort, }
        puts "Now we have #{students.count} students"
    
        name = gets.chomp 
+       cohort = gets.chomp
      end
+
    
      students
    end
