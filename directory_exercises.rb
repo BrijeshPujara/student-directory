@@ -24,7 +24,7 @@ students = [
      name = gets.chomp
    
      while !name.empty? do
-       students << {name: name, cohort: :november}
+       students << {name: name, cohort: :november, }
        puts "Now we have #{students.count} students"
    
        name = gets.chomp 
@@ -36,7 +36,7 @@ students = [
    
    def print_header
      puts "The students of Villains Academy"
-     puts "----------------"
+     puts "----------------".center(27)
    end
    
    def print(names)
@@ -48,7 +48,7 @@ students = [
 
     i = 0
       while i < names.length 
-        puts "#{i + 1} - #{names[i][:name]} - cohort: (#{names[i][:cohort]})"
+        puts "#{i + 1}. #{names[i][:name]} - cohort: (#{names[i][:cohort]})".center(40, "-")
         i +=1
       end
     end
